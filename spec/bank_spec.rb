@@ -11,4 +11,12 @@ describe Bank do
       expect(bank.show_balance).to eq(0)
     end
   end
+  
+  describe '#deposit' do
+    it 'adds an amount of money to the client\'s balance' do
+      bank = Bank.new(0)
+      bank.deposit(1000)
+      expect(bank.show_balance).to eq(1000)
+    end
+  end
 end
