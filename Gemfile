@@ -2,5 +2,5 @@
 
 source "https://rubygems.org"
 
-gem "ruby"
+ruby "3.1.2"
 gem "rspec"
