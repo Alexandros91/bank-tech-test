@@ -19,4 +19,14 @@ describe Bank do
       expect(bank.show_balance).to eq(1000)
     end
   end
+
+  describe '#withdraw' do
+    it 'abstracts an amount of money from the client\'s balance' do
+      bank = Bank.new(0)
+      bank.deposit(1000)
+      bank.withdraw(500)
+      expect(bank.show_balance).to eq(500)
+    end
+  end
+
 end
