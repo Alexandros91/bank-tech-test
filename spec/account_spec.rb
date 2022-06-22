@@ -38,4 +38,12 @@ describe Account do
     end
   end
 
+  describe '#print_message' do
+    it 'prints a message with the debit and balance history reversed' do
+      account = Account.new(0.0)
+      account.deposit(1000.0)
+      account.withdraw(750.0)
+      expect(account.print_message).to include("credit || debit || balance")
+    end
+  end
 end
